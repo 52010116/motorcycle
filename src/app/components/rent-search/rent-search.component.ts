@@ -1,30 +1,40 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Motorcycle } from 'src/app/motorcycle';
+import { MotorcycleService } from 'src/app/motorcycle.service';
 
 @Component({
   selector: 'app-rent-search',
   templateUrl: './rent-search.component.html',
   styleUrls: ['./rent-search.component.css']
 })
-export class RentComponent implements OnInit {
+export class RentSearchComponent implements OnInit {
 
   brand = 'Yamaha';
-  // model = 'XT 660'
   year = '2009';
+  // model = 'XT 660'
   // hp = '48
-
 
   //Das motorcycle Array nimmt die gefundenen bikes auf. Es ist mit dem zu erzeugten Interface Motorcycle typisiert.
   motorcycles: Array<Motorcycle> = [];
+
   //Die Eigenschaft selectedMotorcycle repräsentiert den ausgewählten bike. Initialwert = 0
   selectedMotorcycle: Motorcycle | null = null;
-  basket: any;
+
+  // valid inspection Option (checkbox)
+  valid_inspectionFilter = true;
+
+
+  basket: { [key: number]: boolean} = {
+    100: true,
+    165: true
+  };
+
+
 
   // HttpClient anfordern Dependency Injection Dependency Injection bzw. Constructor Injection:
-  constructor(private http: HttpClient) {
-
-   }
+  constructor(private motorcycleService: MotorcycleService) {
+  }
 
 
   // Diese Methode ruft Angular nach dem Initialisieren der Komponente auf,
@@ -35,39 +45,18 @@ export class RentComponent implements OnInit {
   //Die Methode search kümmert sich um das Abrufen der Bikes.
   search(): void {
 
-
-    // server mit dem befehl installieren: npm install -g json-server
-    // server mit dem befehl starten: json-server --watch db.json
-    const url = ' http://localhost:3000/motorcycles';
-
-    const headers = new HttpHeaders()
-        .set('Accept', 'application/json');
-
-    //Die Aufrufe von set die aktuelle Auflistung nicht verändern, sondern eine neue Auflistung zurückliefern.
-    //Deswegen verkettet das Beispiel auch die einzelnen Aufrufe von set.
-
-    const params = new HttpParams()
-        .set('brand', this.brand)
-        //.set('model', this.model)
-        .set('year', this.year);
-        //.set('hp', this.hp)
-
-
-  //Die Methode get führt einen HTTP-Zugriff unter Verwendung der HTTP-Methode GET durch.
-  //Diese Methode kommt typischerweise zum Abrufen von Daten zum Einsatz
-    this.http.get<Motorcycle[]>(url, {headers, params}).subscribe({
-        next: (motorcycles) => {
-            this.motorcycles = motorcycles;
-        },
-        error: (err) => {
-            console.error('Error', err);
-        }
+    this.motorcycleService.find(this.brand, this.year).subscribe({
+      next: (motorcycles) => {
+        this.motorcycles = motorcycles
+      }
     });
 
- }
+  }
 
- // Die Methode select notiert sich den vom Benutzer ausgewähltes Bike
- select(m: Motorcycle): void{
+  // Die Methode select notiert sich den vom Benutzer ausgewähltes Bike
+  select(m: Motorcycle): void{
     this.selectedMotorcycle = m;
- }
+  }
+
 }
+

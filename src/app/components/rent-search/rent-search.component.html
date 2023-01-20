@@ -10,6 +10,11 @@
   </div>
 
 
+  <div class="form-group">
+    <input [(ngModel)]="valid_inspectionFilter" type="checkbox" id="valid_inspectionFilter">
+    &nbsp;
+    <label for="valid_inspectionFilter">Valid Inspection</label>
+  </div>
 
 
  <div class="form-group">
@@ -18,20 +23,19 @@
     </button>
  </div>
 
- <table class="table table-striped">
 
-    <tr *ngFor="let motorcycle of motorcycles"
-        [ngClass]="{ 'active': motorcycle === selectedMotorcycle }">
-        <td>{{motorcycle.brand}}</td>
-        <td>{{motorcycle.model}}</td>
-        <td>{{motorcycle.ccm}}</td>
-        <td>{{motorcycle.hp}}</td>
-        <td>{{motorcycle.year | date:'yyyy'}}</td>
-        <td><a (click)="select(motorcycle)">Select</a></td>
-    </tr>
+  <div class="row">
+    <div *ngFor="let m of motorcycles"
+        class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+        <app-rent-card [item]="m" [(selected)]="basket[m.id]">
+        </app-rent-card>
+    </div>
+  </div>
 
- </table>
 
- <b>Basket</b>
- <pre>{{ selectedMotorcycle | json }}</pre>
+  <b>Basket</b>
+  <pre>{{ basket | json }}</pre>
+
+
+
 

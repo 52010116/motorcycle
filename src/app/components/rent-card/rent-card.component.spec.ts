@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RentSearchComponent } from './rent-search.component';
+import { RentCardComponent } from './rent-card.component';
 
-describe('RentSearchComponent', () => {
-  let component: RentSearchComponent;
-  let fixture: ComponentFixture<RentSearchComponent>;
+describe('RentCardComponent', () => {
+  let component: RentCardComponent;
+  let fixture: ComponentFixture<RentCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RentSearchComponent ]
+      declarations: [ RentCardComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RentSearchComponent);
+    fixture = TestBed.createComponent(RentCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

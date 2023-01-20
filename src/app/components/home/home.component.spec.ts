@@ -1,18 +1,20 @@
+/* tslint:disable:no-unused-variable */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HomeComponent } from './home.component';
 
-import { RentSearchComponent } from './rent-search.component';
-
-describe('RentSearchComponent', () => {
-  let component: RentSearchComponent;
-  let fixture: ComponentFixture<RentSearchComponent>;
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RentSearchComponent ]
+      declarations: [ HomeComponent ]
     })
     .compileComponents();
+  });
 
-    fixture = TestBed.createComponent(RentSearchComponent);
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

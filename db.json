@@ -8,9 +8,9 @@
       "hp": "48",
       "ccm": "660",
       "kilometers": 14560,
-      "valid inspection": true,
-      "next inspection": "2023-04-23",
-      "next service": "2023-01-22"
+      "valid_inspection": true,
+      "next_inspection": "2023-04-23",
+      "next_service": "2023-01-22"
     },
     {
       "id": 125,
@@ -20,9 +20,9 @@
       "hp": "48",
       "ccm": "660",
       "kilometers": 35007,
-      "valid inspection": true,
-      "next inspection": "2023-04-23",
-      "next service": "2023-01-22"
+      "valid_inspection": true,
+      "next_inspection": "2023-04-23",
+      "next_service": "2023-01-22"
     },
     {
       "id": 101,
@@ -32,9 +32,9 @@
       "hp": "75",
       "ccm": "699",
       "kilometers": 18760,
-      "valid inspection": false,
-      "next inspection": "2022-08-23",
-      "next service": "2023-01-30"
+      "valid_inspection": false,
+      "next_inspection": "2022-08-23",
+      "next_service": "2023-01-30"
     },
     {
       "id": 165,
@@ -44,9 +44,9 @@
       "hp": "48",
       "ccm": "660",
       "kilometers": 18760,
-      "valid inspection": false,
-      "next inspection": "2022-08-23",
-      "next service": "2023-01-30"
+      "valid_inspection": false,
+      "next_inspection": "2022-08-23",
+      "next_service": "2023-01-30"
     },
     {
       "id": 102,
@@ -56,9 +56,9 @@
       "hp": "75",
       "ccm": "690",
       "kilometers": 560,
-      "valid inspection": true,
-      "next inspection": "2025-07-23",
-      "next service": "2023-01-05"
+      "valid_inspection": true,
+      "next_inspection": "2025-07-23",
+      "next_service": "2023-01-05"
     },
     {
       "id": 104,
@@ -68,9 +68,9 @@
       "hp": "67",
       "ccm": "685",
       "kilometers": 24560,
-      "valid inspection": true,
-      "next inspection": "2023-01-23",
-      "next service": "2023-06-22"
+      "valid_inspection": true,
+      "next_inspection": "2023-01-23",
+      "next_service": "2023-06-22"
     },
     {
       "id": 105,
@@ -80,9 +80,9 @@
       "hp": "71",
       "ccm": "690",
       "kilometers": 10560,
-      "valid inspection": false,
-      "next inspection": "2022-12-23",
-      "next service": "2023-08-30"
+      "valid_inspection": false,
+      "next_inspection": "2022-12-23",
+      "next_service": "2023-08-30"
     },
     {
       "id": 106,
@@ -92,9 +92,9 @@
       "hp": "85",
       "ccm": "790",
       "kilometers": 55560,
-      "valid inspection": true,
-      "next inspection": "2024-09-23",
-      "next service": "2023-10-22"
+      "valid_inspection": true,
+      "next_inspection": "2024-09-23",
+      "next_service": "2023-10-22"
     }
   ]
 }
