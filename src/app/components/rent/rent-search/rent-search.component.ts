@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Motorcycle } from 'src/app/motorcycle';
-import { MotorcycleService } from 'src/app/motorcycle.service';
+import { Motorcycle } from 'src/app/components/entities/motorcycle';
+import { RentService } from '../rent.service';
 
 @Component({
   selector: 'app-rent-search',
@@ -33,7 +33,7 @@ export class RentSearchComponent implements OnInit {
 
 
   // HttpClient anfordern Dependency Injection Dependency Injection bzw. Constructor Injection:
-  constructor(private motorcycleService: MotorcycleService) {
+  constructor(private rentService: RentService) {
   }
 
 
@@ -45,7 +45,7 @@ export class RentSearchComponent implements OnInit {
   //Die Methode search kümmert sich um das Abrufen der Bikes.
   search(): void {
 
-    this.motorcycleService.find(this.brand, this.year).subscribe({
+    this.rentService.find(this.brand, this.year).subscribe({
       next: (motorcycles) => {
         this.motorcycles = motorcycles
       }

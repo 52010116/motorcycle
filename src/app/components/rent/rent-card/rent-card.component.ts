@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Motorcycle } from 'src/app/motorcycle';
+import { Motorcycle } from 'src/app/components/entities/motorcycle';
 import { RentSearchComponent } from '../rent-search/rent-search.component';
 
 

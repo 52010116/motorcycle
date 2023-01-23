@@ -2,12 +2,12 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Motorcycle } from 'src/app/motorcycle';
+import { Motorcycle } from 'src/app/components/entities/motorcycle';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MotorcycleService  {
+export class RentService  {
 
   constructor(private http: HttpClient) { }
 
