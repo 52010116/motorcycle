@@ -25,18 +25,6 @@
       "next_service": "2023-01-30"
     },
     {
-      "id": 675,
-      "brand": "Yamaha",
-      "model": "XT 660 X",
-      "year": "2009",
-      "hp": "70",
-      "ccm": "699",
-      "kilometers": 18760,
-      "valid_inspection": false,
-      "next_inspection": "2022-08-23",
-      "next_service": "2023-01-30"
-    },
-    {
       "id": 234,
       "brand": "Yamaha",
       "model": "XT 660 X",
@@ -132,6 +120,18 @@
       "next_inspection": "2024-09-23",
       "next_service": "2023-10-22"
     }
+  ],
+  "posts": [
+    {
+    "id": 100,
+    "title": "Extra spare Key",
+    "body": "Please give me an extra spare Key"
+    },
+    {
+      "id": 101,
+      "title": "Extra spare tire",
+      "body": "Please give me an extra spare tire"
+      }
   ],
   "parts": [
     {

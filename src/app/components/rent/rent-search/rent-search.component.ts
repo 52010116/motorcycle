@@ -53,13 +53,7 @@ export class RentSearchComponent implements OnInit {
     });
 
   }
-  /*
-  update(selection: any): void {
-    this.rentService
-    .change(selection)
-    .subscribe()
-  }
-  */
+
 
 
 

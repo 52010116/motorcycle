@@ -1,21 +1,21 @@
 /* tslint:disable:no-unused-variable */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RentEditComponent } from './rent-edit.component';
+import { RentRequestComponent } from './rent-request.component';
 
-describe('RentEditComponent', () => {
-  let component: RentEditComponent;
-  let fixture: ComponentFixture<RentEditComponent>;
+describe('RentRequestComponent', () => {
+  let component: RentRequestComponent;
+  let fixture: ComponentFixture<RentRequestComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RentEditComponent ]
+      declarations: [ RentRequestComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RentEditComponent);
+    fixture = TestBed.createComponent(RentRequestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

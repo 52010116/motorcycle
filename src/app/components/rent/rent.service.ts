@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Motorcycle } from 'src/app/components/entities/motorcycle';
+import { Post } from '../entities/post';
 
 @Injectable({
   providedIn: 'root'
@@ -51,13 +52,29 @@ export class RentService  {
   createNewMotorcycle(Motorcycle: any):Observable<Motorcycle> {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
-    return this.http.post<Motorcycle>(this.url+"/"+Motorcycle.id, {headers})
+    return this.http.post<Motorcycle>(this.url+"/"+Motorcycle.brand, Motorcycle.year, {headers})
   }
 
 
-  updateMotorcycle(Motorcycle: any):Observable<Motorcycle> {
+  // edit db Entry
+  updateMotorcycle(selectedBike: any):Observable<Motorcycle> {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
-    return this.http.put<Motorcycle>(this.url+"/"+Motorcycle.id, {headers})
+    return this.http.put<Motorcycle>(this.url+"/"+selectedBike.id, selectedBike, {headers})
   }
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
+
+  createPost(data: any): Observable<any> {
+    return this.http.post('http://localhost:3000/posts', data);
+  }
+
+  updatePost(id: any, data: any): Observable<any> {
+    return this.http.put(`${'http://localhost:3000/posts'}/${id}`, data);
+  }
+
 }
