@@ -1,3 +1,5 @@
+
+
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Motorcycle } from 'src/app/components/entities/motorcycle';
@@ -44,7 +46,6 @@ export class RentSearchComponent implements OnInit {
 
   //Die Methode search kümmert sich um das Abrufen der Bikes.
   search(): void {
-
     this.rentService.findMotorcycle(this.brand, this.year).subscribe({
       next: (motorcycles) => {
         this.motorcycles = motorcycles
@@ -60,14 +61,7 @@ export class RentSearchComponent implements OnInit {
   }
   */
 
-  // Die Methode select notiert sich den vom Benutzer ausgewähltes Bike
-  selectChoice(m: Motorcycle): void{
-    this.selectedMotorcycle = m;
-  }
 
-  deleteChoice(m: Motorcycle): void{
-    this.selectedMotorcycle = m;
-  }
 
 }
 

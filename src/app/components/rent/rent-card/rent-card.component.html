@@ -14,13 +14,18 @@
         <p>Kilometers.: {{item?.kilometers}}</p>
         <p [ngStyle]="{ 'color': item?.valid_inspection }">Valid Inspection: {{ item?.valid_inspection }}</p>
         <p>
-            <button class="btn btn-default"
+          <button class="btn btn-default"
             *ngIf="!selected"
             (click)="select()">Select</button>
 
           <button class="btn btn-default"
             *ngIf="selected"
-            (click)="removeChoice()">Remove</button>
+            (click)="removeChoice()">Remove Choice</button>
+
+          <button class="btn btn-default"
+            *ngIf="selected"
+            (click)="deleteChoice()">Delete</button>
+
 
 
 

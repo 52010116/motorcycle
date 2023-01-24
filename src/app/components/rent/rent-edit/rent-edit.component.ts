@@ -1,3 +1,4 @@
+
 import { OnInit } from '@angular/core';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -22,9 +23,5 @@ export class RentEditComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-
-
-
-
 
 }

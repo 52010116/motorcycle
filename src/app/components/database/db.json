@@ -1,35 +1,71 @@
 {
   "motorcycles": [
     {
-      "id": 100,
-      "brand": "Yamaha",
-      "model": "XT 660 X",
-      "year": "2009",
-      "hp": "48",
-      "ccm": "660",
-      "kilometers": 14560,
-      "valid_inspection": true,
-      "next_inspection": "2023-04-23",
-      "next_service": "2023-01-22"
-    },
-    {
-      "id": 125,
-      "brand": "Yamaha",
-      "model": "XT 660 R",
-      "year": "2009",
-      "hp": "48",
-      "ccm": "660",
-      "kilometers": 35007,
-      "valid_inspection": true,
-      "next_inspection": "2023-04-23",
-      "next_service": "2023-01-22"
-    },
-    {
       "id": 101,
       "brand": "Yamaha",
       "model": "MT 07",
       "year": "2015",
       "hp": "75",
+      "ccm": "699",
+      "kilometers": 18760,
+      "valid_inspection": false,
+      "next_inspection": "2022-08-23",
+      "next_service": "2023-01-30"
+    },
+    {
+      "id": 345,
+      "brand": "Yamaha",
+      "model": "XT 660 X",
+      "year": "2009",
+      "hp": "70",
+      "ccm": "699",
+      "kilometers": 18760,
+      "valid_inspection": false,
+      "next_inspection": "2022-08-23",
+      "next_service": "2023-01-30"
+    },
+    {
+      "id": 675,
+      "brand": "Yamaha",
+      "model": "XT 660 X",
+      "year": "2009",
+      "hp": "70",
+      "ccm": "699",
+      "kilometers": 18760,
+      "valid_inspection": false,
+      "next_inspection": "2022-08-23",
+      "next_service": "2023-01-30"
+    },
+    {
+      "id": 234,
+      "brand": "Yamaha",
+      "model": "XT 660 X",
+      "year": "2009",
+      "hp": "70",
+      "ccm": "699",
+      "kilometers": 18760,
+      "valid_inspection": false,
+      "next_inspection": "2022-08-23",
+      "next_service": "2023-01-30"
+    },
+    {
+      "id": 890,
+      "brand": "Yamaha",
+      "model": "XT 660 X",
+      "year": "2009",
+      "hp": "70",
+      "ccm": "699",
+      "kilometers": 18760,
+      "valid_inspection": false,
+      "next_inspection": "2022-08-23",
+      "next_service": "2023-01-30"
+    },
+    {
+      "id": 555,
+      "brand": "Yamaha",
+      "model": "XT 660 X",
+      "year": "2009",
+      "hp": "70",
       "ccm": "699",
       "kilometers": 18760,
       "valid_inspection": false,
@@ -105,7 +141,6 @@
       "fitsModel": "Civic",
       "fitsYear": 2000
     },
-
     {
       "Id": 124,
       "partName": "clutch2",
@@ -155,6 +190,5 @@
       "fitsModel": "Civic",
       "fitsYear": 2003
     }
-
   ]
 }

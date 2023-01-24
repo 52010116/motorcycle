@@ -10,7 +10,7 @@
         <p>Model.: {{item?.fitsYear}}</p>
         <p>Year.: {{item?.fitsYear}}</p>
         <p>ID.: {{item?.Id}}</p>
-        
+
             <button class="btn btn-default"
             *ngIf="!selected"
             (click)="select()">Select</button>
@@ -19,9 +19,7 @@
             *ngIf="selected"
             (click)="deselect()">Remove</button>
 
-        <button class="btn btn-default"
-            *ngIf="selected"
-            (click)="delete()">delete</button>
+
 
 
 

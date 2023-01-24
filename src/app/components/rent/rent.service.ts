@@ -13,11 +13,14 @@ export class RentService  {
 
   constructor(private http: HttpClient) { }
 
+
+  // server mit dem befehl installieren: npm install -g json-server
+  // server mit dem befehl starten: json-server --watch db.json
+  url = 'http://localhost:3000/motorcycles';
+
   findMotorcycle(brand: string, year: string): Observable<Motorcycle[]> {
 
-    // server mit dem befehl installieren: npm install -g json-server
-    // server mit dem befehl starten: json-server --watch db.json
-    const url = 'http://localhost:3000/motorcycles';
+
 
     // definiert welches Datenformat akzeptiert wird
     const headers = new HttpHeaders()
@@ -32,7 +35,7 @@ export class RentService  {
         //.set('hp', hp)
         //.set('model', model)
 
-    return this.http.get<Motorcycle[]>(url, {headers, params});
+    return this.http.get<Motorcycle[]>(this.url, {headers, params});
   }
 
 
@@ -40,7 +43,7 @@ export class RentService  {
   removeMotorcycleEntry(Motorcycle: any):Observable<Motorcycle> {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
-    return this.http.delete<Motorcycle>('http://localhost:3000/motorcycles'+Motorcycle.id, {headers});
+    return this.http.delete<Motorcycle>(this.url+"/"+Motorcycle.id, {headers});
   }
 
 
@@ -48,13 +51,13 @@ export class RentService  {
   createNewMotorcycle(Motorcycle: any):Observable<Motorcycle> {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
-    return this.http.post<Motorcycle>('http://localhost:3000/motorcycles'+Motorcycle.id, {headers})
+    return this.http.post<Motorcycle>(this.url+"/"+Motorcycle.id, {headers})
   }
 
 
   updateMotorcycle(Motorcycle: any):Observable<Motorcycle> {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
-    return this.http.put<Motorcycle>('http://localhost:3000/motorcycles'+Motorcycle.id, {headers})
+    return this.http.put<Motorcycle>(this.url+"/"+Motorcycle.id, {headers})
   }
 }
