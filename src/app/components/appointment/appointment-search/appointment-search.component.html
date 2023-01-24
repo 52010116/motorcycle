@@ -1,0 +1,35 @@
+<h1>Search for your motorcycles</h1>
+
+  <div class="form-group">
+    <label>Brand:</label>
+    <input [(ngModel)]="brand" name="Brand" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Year:</label>
+    <input [(ngModel)]="year" name="Year" class="form-control">
+  </div>
+
+
+ <div class="form-group">
+    <button class="btn btn-default" (click)="search()" [disabled]="!brand || !year">
+      Search
+    </button>
+ </div>
+
+
+  <div class="row">
+    <div *ngFor="let m of motorcycles"
+        class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+        <app-appointment-card [item]="m" [(selected)]="basket[m.id]">
+        </app-appointment-card>
+    </div>
+  </div>
+
+
+
+  <b>Basket</b>
+  <pre>{{ basket | json }}</pre>
+
+
+
+

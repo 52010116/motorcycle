@@ -13,6 +13,7 @@ import { RentModule } from './components/rent/rent.module';
 import { HomeComponent } from './components/home/home.component';
 import { PartModule } from './components/parts/parts.module';
 import { CommonModule } from '@angular/common';
+import { AppointmentModule } from './components/appointment/appointment.module';
 
 
 
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     RentModule,
     PartModule,
+    AppointmentModule,
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
   ],
