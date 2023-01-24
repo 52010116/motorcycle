@@ -123,15 +123,16 @@
   ],
   "posts": [
     {
-    "id": 100,
-    "title": "Extra spare Key",
-    "body": "Please give me an extra spare Key"
+      "id": 100,
+      "title": "Extra spare Key",
+      "body": "Please give me an extra spare Key",
+      "published": true
     },
     {
-      "id": 101,
-      "title": "Extra spare tire",
-      "body": "Please give me an extra spare tire"
-      }
+      "title": "Send Help",
+      "body": "I need help asap",
+      "id": 101
+    }
   ],
   "parts": [
     {

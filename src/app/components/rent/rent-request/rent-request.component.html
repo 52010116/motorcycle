@@ -1,3 +1,4 @@
+<h1>Make a special Request</h1>
 <div>
   <div class="submit-form">
     <div *ngIf="!submitted">
@@ -8,7 +9,6 @@
           type="text"
           class="form-control"
           id="title"
-          required
           [(ngModel)]="post.title"
           name="title"/>
       </div>
@@ -19,18 +19,20 @@
         <input
           class="form-control"
           id="description"
-          required
           [(ngModel)]="post.body"
           name="description"/>
       </div>
 
-      <button (click)="createRequest()" class="btn btn-success">Request</button>
+
+
+      <button (click)="createRequest()" [disabled]="!post.title || !post.body" class="btn btn-success">Send special Request</button>
     </div>
 
     <div *ngIf="submitted">
       <h4>Request was submitted successfully!</h4>
-      <button class="btn btn-success" (click)="newPost()">Add</button>
+      <button class="btn btn-success" (click)="newPost()">Make another Request</button>
     </div>
 
   </div>
 </div>
+

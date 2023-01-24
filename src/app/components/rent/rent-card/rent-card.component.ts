@@ -43,9 +43,4 @@ export class RentCardComponent {
 
   }
 
-  // Eintrag bearbeiten
-  editEntry(): void{
-    this.rentService
-      .updateMotorcycle(this.selected)
-  }
 }

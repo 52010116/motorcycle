@@ -56,18 +56,9 @@ export class RentService  {
   }
 
 
-  // edit db Entry
-  updateMotorcycle(selectedBike: any):Observable<Motorcycle> {
-    const headers = new HttpHeaders()
-      .set('Accept', 'application/json');
-    return this.http.put<Motorcycle>(this.url+"/"+selectedBike.id, selectedBike, {headers})
-  }
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
+
+
 
   createPost(data: any): Observable<any> {
     return this.http.post('http://localhost:3000/posts', data);
@@ -77,4 +68,7 @@ export class RentService  {
     return this.http.put(`${'http://localhost:3000/posts'}/${id}`, data);
   }
 
+  getPost(id: any): Observable<Post> {
+    return this.http.get<Post>(`${'http://localhost:3000/posts'}/${id}`);
+  }
 }

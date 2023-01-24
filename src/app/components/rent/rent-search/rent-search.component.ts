@@ -33,7 +33,6 @@ export class RentSearchComponent implements OnInit {
   };
 
 
-
   // HttpClient anfordern Dependency Injection Dependency Injection bzw. Constructor Injection:
   constructor(private rentService: RentService) {
   }
@@ -53,8 +52,6 @@ export class RentSearchComponent implements OnInit {
     });
 
   }
-
-
 
 
 }
