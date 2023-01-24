@@ -1,7 +1,7 @@
 <div class="card" [ngClass]="{ 'active-card' : selected }">
 
     <div class="card-header">
-        <h2 class="title">{{item?.partName}} - {{item?.fitsBrand}}</h2>
+        <h2 class="title">{{item?.partName}} for {{item?.fitsBrand}}</h2>
     </div>
 
 
@@ -9,7 +9,7 @@
         <p>Brand.: {{item?.fitsBrand}}</p>
         <p>Model.: {{item?.fitsYear}}</p>
         <p>Year.: {{item?.fitsYear}}</p>
-        <p>ID.: {{item?.Id}}</p>
+        <p>ID.: {{item?.id}}</p>
 
             <button class="btn btn-default"
             *ngIf="!selected"
@@ -19,9 +19,13 @@
             *ngIf="selected"
             (click)="deselect()">Remove</button>
 
+        <button class="btn btn-default"
+            *ngIf="selected"
+            (click)="deletePart()">Delete</button>
 
-
-
+        <button class="btn btn-dafault" 
+        *ngIf="selected"
+        (click)="editPart()">Edit</button>
 
     </div>
  </div>

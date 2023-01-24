@@ -12,9 +12,7 @@ describe('PartEditComponent', () => {
       declarations: [ PartEditComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(PartEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

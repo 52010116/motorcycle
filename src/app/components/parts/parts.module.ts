@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PART_ROUTES } from './parts.routes';
-import { FormsModule} from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { PartEditComponent } from './parts-edit/part-edit.component';
 import { PartSearchComponent } from 'src/app/components/parts/parts-search/parts-search.component';
 import { PartCardComponent } from 'src/app/components/parts/parts-card/part-card.component';
 
@@ -12,6 +12,7 @@ import { PartCardComponent } from 'src/app/components/parts/parts-card/part-card
     imports:[
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         RouterModule.forChild(PART_ROUTES),
     ],
 
@@ -23,7 +24,8 @@ import { PartCardComponent } from 'src/app/components/parts/parts-card/part-card
     providers: [],
 
     exports: [
-      PartSearchComponent
+      PartSearchComponent,
+      ReactiveFormsModule
     ]
 
   })

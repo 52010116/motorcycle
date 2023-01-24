@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { SpareParts } from '../../entities/parts';
 import { PartSearchComponent } from 'src/app/components/parts/parts-search/parts-search.component'
-
+import { PartService } from '../parts.service';
 
 @Component({
   selector: 'app-part-card',
@@ -26,5 +26,18 @@ export class PartCardComponent {
     this.selected = false
     this.selectedChange.emit(false);
   }
+  constructor(private partService: PartService) {
 
+  }
+
+  deletePart(): void{
+    this.partService
+      .removePartEntry(this.item)
+      .subscribe()
+  }
+
+  editPart(): void{
+    this.partService
+    
+  }
 }

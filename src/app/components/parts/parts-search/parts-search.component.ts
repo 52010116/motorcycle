@@ -12,10 +12,18 @@ import { PartService } from '../parts.service';
 
 export class PartSearchComponent implements OnInit {
 
-  partName = '';
-  fitsModel = '';
+  partName = 'Clutch';
+  fitsModel = '690 SCMR';
 
+  post: SpareParts = {
+    id: '',
+    partName: '',
+    fitsModel: '',
+    fitsBrand: '',
+    fitsYear: ''
+  };
 
+  submitted = false;
   //Das motorcycle Array nimmt die gefundenen bikes auf. Es ist mit dem zu erzeugten Interface Motorcycle typisiert.
   parts: Array<SpareParts> = [];
 
@@ -51,11 +59,36 @@ export class PartSearchComponent implements OnInit {
     });
 
   }
+  createRequest(): void {
+    const data = {
+      partName: this.post.partName,
+      fitsModel: this.post.fitsModel,
+      fitsBrand: this.post.fitsBrand,
+      fitsYear: this.post.fitsYear
 
+    };
+
+    this.partService.createPost(data)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.submitted = true;
+        }
+      });
+  }
+
+  newPost(): void {
+    this.submitted = false
+    this.post = {
+      partName: '',
+      fitsModel: '',
+      fitsBrand: '',
+      fitsYear: '',
+    };
+  }
   // Die Methode select notiert sich den vom Benutzer ausgewähltes Bike
   select(p: SpareParts): void{
     this.selectedPart = p;
   }
-
 }
 
