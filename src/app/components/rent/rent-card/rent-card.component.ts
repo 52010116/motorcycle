@@ -32,10 +32,10 @@ export class RentCardComponent {
   }
 
 
-  // HttpClient anfordern Dependency Injection
+  // HttpClient via Dependency Injection
   constructor(private rentService: RentService) {
   }
-
+  // löscht ausgewählte Karte aus db
   deleteChoice(): void{
     this.rentService
       .removeMotorcycleEntry(this.item)
@@ -43,4 +43,9 @@ export class RentCardComponent {
 
   }
 
+  // Eintrag bearbeiten
+  editEntry(): void{
+    this.rentService
+      .updateMotorcycle(this.selected)
+  }
 }

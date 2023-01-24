@@ -19,6 +19,10 @@
             (click)="select()">Select</button>
 
           <button class="btn btn-default"
+            *ngIf="!selected"
+            (click)="editEntry()">Edit</button>
+
+          <button class="btn btn-default"
             *ngIf="selected"
             (click)="removeChoice()">Remove Choice</button>
 
