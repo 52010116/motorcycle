@@ -1,0 +1,31 @@
+<h1>Search for rental motorcycles</h1>
+
+  <div class="form-group">
+    <label>Part Name:</label>
+    <input [(ngModel)]="partName" name="partName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Fits Model:</label>
+    <input [(ngModel)]="fitsModel" name="fitsModel" class="form-control">
+  </div>
+
+
+
+ <div class="form-group">
+    <button class="btn btn-default" (click)="search()" [disabled]="!partName || !fitsModel">
+      Search
+    </button>
+ </div>
+
+
+  <div class="row">
+    <div *ngFor="let p of parts"
+        class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+        <app-part-card [item]="p" [(selected)]="basket[p.Id]">
+        </app-part-card>
+    </div>
+  </div>
+
+
+  <b>Basket</b>
+  <pre>{{ basket | json }}</pre>

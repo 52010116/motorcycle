@@ -1,17 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Motorcycle } from 'src/app/components/entities/motorcycle';
-import { RentSearchComponent } from '../rent-search/rent-search.component';
+import { SpareParts } from '../../entities/parts';
+import { PartSearchComponent } from 'src/app/components/parts/parts-search/parts-search.component'
 
 
 @Component({
-  selector: 'app-rent-card',
-  templateUrl: './rent-card.component.html',
-  styleUrls: ['./rent-card.component.css']
+  selector: 'app-part-card',
+  templateUrl: './part-card.component.html',
+  styleUrls: ['./part-card.component.css']
 })
-export class RentCardComponent {
+export class PartCardComponent {
 
   //Der Input-Dekorator dekoriert sämtliche Eigenschaften, welche die Komponente von ihrem Parent entgegennimmt.
-  @Input() item: Motorcycle | null = null;
+  @Input() item: SpareParts | null = null;
   @Input() selected = false;
   @Output() selectedChange = new EventEmitter<boolean>();
 
@@ -22,7 +22,7 @@ export class RentCardComponent {
   }
 
   //deselect hebt diese Auswahl wieder auf
-  removeChoice() {
+  deselect() {
     this.selected = false
     this.selectedChange.emit(false);
   }

@@ -22,12 +22,12 @@ export class RentSearchComponent implements OnInit {
   selectedMotorcycle: Motorcycle | null = null;
 
   // valid inspection Option (checkbox)
-  valid_inspectionFilter = true;
+  // implementierung falls zeit über bleibt
+  //valid_inspectionFilter = true;
 
 
-  basket: { [key: number]: boolean} = {
-    100: true,
-    165: true
+  basket: { [key: number]: boolean } = {
+
   };
 
 
@@ -45,16 +45,27 @@ export class RentSearchComponent implements OnInit {
   //Die Methode search kümmert sich um das Abrufen der Bikes.
   search(): void {
 
-    this.rentService.find(this.brand, this.year).subscribe({
+    this.rentService.findMotorcycle(this.brand, this.year).subscribe({
       next: (motorcycles) => {
         this.motorcycles = motorcycles
       }
     });
 
   }
+  /*
+  update(selection: any): void {
+    this.rentService
+    .change(selection)
+    .subscribe()
+  }
+  */
 
   // Die Methode select notiert sich den vom Benutzer ausgewähltes Bike
-  select(m: Motorcycle): void{
+  selectChoice(m: Motorcycle): void{
+    this.selectedMotorcycle = m;
+  }
+
+  deleteChoice(m: Motorcycle): void{
     this.selectedMotorcycle = m;
   }
 

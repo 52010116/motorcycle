@@ -1,4 +1,5 @@
 
+
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -9,9 +10,10 @@ import { Motorcycle } from 'src/app/components/entities/motorcycle';
 })
 export class RentService  {
 
+
   constructor(private http: HttpClient) { }
 
-  find(brand: string, year: string): Observable<Motorcycle[]> {
+  findMotorcycle(brand: string, year: string): Observable<Motorcycle[]> {
 
     // server mit dem befehl installieren: npm install -g json-server
     // server mit dem befehl starten: json-server --watch db.json
@@ -31,5 +33,28 @@ export class RentService  {
         //.set('model', model)
 
     return this.http.get<Motorcycle[]>(url, {headers, params});
+  }
+
+
+
+  removeMotorcycleEntry(Motorcycle: any):Observable<Motorcycle> {
+    const headers = new HttpHeaders()
+      .set('Accept', 'application/json');
+    return this.http.delete<Motorcycle>('http://localhost:3000/motorcycles'+Motorcycle.id, {headers});
+  }
+
+
+
+  createNewMotorcycle(Motorcycle: any):Observable<Motorcycle> {
+    const headers = new HttpHeaders()
+      .set('Accept', 'application/json');
+    return this.http.post<Motorcycle>('http://localhost:3000/motorcycles'+Motorcycle.id, {headers})
+  }
+
+
+  updateMotorcycle(Motorcycle: any):Observable<Motorcycle> {
+    const headers = new HttpHeaders()
+      .set('Accept', 'application/json');
+    return this.http.put<Motorcycle>('http://localhost:3000/motorcycles'+Motorcycle.id, {headers})
   }
 }

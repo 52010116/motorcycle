@@ -11,6 +11,7 @@ import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { RentModule } from './components/rent/rent.module';
 import { HomeComponent } from './components/home/home.component';
+import { PartModule } from './components/parts/parts.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     FormsModule,
     RentModule,
+    PartModule,
     RouterModule.forRoot(APP_ROUTES),
   ],
   declarations: [

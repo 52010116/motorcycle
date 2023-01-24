@@ -1,0 +1,27 @@
+<div class="card" [ngClass]="{ 'active-card' : selected }">
+
+    <div class="card-header">
+        <h2 class="title">{{item?.partName}} - {{item?.fitsBrand}}</h2>
+    </div>
+
+
+    <div class="card-body">
+        <p>Brand.: {{item?.fitsBrand}}</p>
+        <p>Model.: {{item?.fitsYear}}</p>
+        <p>Year.: {{item?.fitsYear}}</p>
+        <p>ID.: {{item?.Id}}</p>
+        
+            <button class="btn btn-default"
+            *ngIf="!selected"
+            (click)="select()">Select</button>
+
+          <button class="btn btn-default"
+            *ngIf="selected"
+            (click)="deselect()">Remove</button>
+
+
+
+
+
+    </div>
+ </div>

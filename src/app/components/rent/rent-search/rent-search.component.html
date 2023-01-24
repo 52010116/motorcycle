@@ -9,13 +9,14 @@
     <input [(ngModel)]="year" name="Year" class="form-control">
   </div>
 
-
+  <!--
+    Implementierung falls Zeit ist
   <div class="form-group">
     <input [(ngModel)]="valid_inspectionFilter" type="checkbox" id="valid_inspectionFilter">
     &nbsp;
     <label for="valid_inspectionFilter">Valid Inspection</label>
   </div>
-
+  -->
 
  <div class="form-group">
     <button class="btn btn-default" (click)="search()" [disabled]="!brand || !year">
@@ -31,6 +32,7 @@
         </app-rent-card>
     </div>
   </div>
+
 
 
   <b>Basket</b>
