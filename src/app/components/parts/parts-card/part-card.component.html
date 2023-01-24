@@ -1,8 +1,9 @@
 <div class="card" [ngClass]="{ 'active-card' : selected }">
 
     <div class="card-header">
-        <h2 class="title">{{item?.partName}} for {{item?.fitsBrand}}</h2>
+        <h2 class="title">{{item?.partName}} - {{item?.fitsBrand}}</h2>
     </div>
+
 
 
     <div class="card-body">
@@ -23,9 +24,7 @@
             *ngIf="selected"
             (click)="deletePart()">Delete</button>
 
-        <button class="btn btn-dafault" 
-        *ngIf="selected"
-        (click)="editPart()">Edit</button>
+        
 
     </div>
  </div>

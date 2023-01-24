@@ -1,5 +1,5 @@
 <h1>Search for rental motorcycles</h1>
-<form>
+
   <div class="form-group">
     <label>Part Name:</label>
     <input [(ngModel)]="partName" name="partName" class="form-control">
@@ -9,8 +9,19 @@
     <input [(ngModel)]="fitsModel" name="fitsModel" class="form-control">
   </div>
 
-</form>
 
+  <div class="form-group">
+  <button class="btn btn-default" (click)="search()" [disabled]="!partName || !fitsModel">
+    Search
+  </button>
+  <button
+    routerLink="/part-edit"
+    class="btn btn-default">
+    Edit
+  </button>
+  </div>
+
+  
 
 
 
@@ -66,7 +77,7 @@
             name="fitsBrand"/>
         </div>
   
-        <button (click)="createRequest()" class="btn btn-success">Request</button>
+        <button (click)="createRequest()" class="btn btn-success">Save entry</button>
       </div>
   
       <div *ngIf="submitted">
@@ -77,8 +88,6 @@
     </div>
   </div>
 
-
-
   <div class="row">
     <div *ngFor="let p of parts"
         class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
@@ -86,8 +95,12 @@
         </app-part-card>
     </div>
 
+  
 
 
 
-  <b>Basket</b>
-  <pre>{{ basket | json }}</pre>
+    <div class="card">
+      <div class="card-body">
+        <pre>{{ basket | json }}</pre>
+      </div>
+    </div>

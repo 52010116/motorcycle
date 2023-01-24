@@ -123,33 +123,68 @@
   ],
   "posts": [
     {
-    "id": 100,
-    "title": "Extra spare Key",
-    "body": "Please give me an extra spare Key"
+      "id": 100,
+      "title": "Extra spare Key",
+      "body": "Please give me an extra spare Key"
     },
     {
       "id": 101,
       "title": "Extra spare tire",
       "body": "Please give me an extra spare tire"
-      }
+    }
   ],
   "parts": [
     {
-      "id": 315,
+      "id": 369,
+      "partName": "Clutch3",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 355,
       "partName": "Clutch",
       "fitsBrand": "KTM",
       "fitsModel": "690 SMCR",
       "fitsYear": 2018
     },
     {
-      "id": 318,
+      "id": 375,
       "partName": "Clutch",
       "fitsBrand": "KTM",
       "fitsModel": "690 SMCR",
       "fitsYear": 2018
     },
     {
-      "id": 330,
+      "id": 395,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 312,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 819,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 628,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 337,
       "partName": "Clutch",
       "fitsBrand": "KTM",
       "fitsModel": "690 SMCR",
@@ -203,18 +238,20 @@
       "fitsBrand": "scadqad",
       "fitsYear": "adxcad",
       "id": 319
-    }
-  ],
-  "newParts": [
-    {
-      "id": 307,
-      "partName": "Seat",
-      "fitsModel": "Dorsoduro"
     },
     {
-      "id": 307,
-      "partName": "Seat",
-      "fitsModel": "Dorsoduro"
+      "partName": "Fork",
+      "fitsModel": "640 ",
+      "fitsBrand": "KTM",
+      "fitsYear": "2003",
+      "id": 331
+    },
+    {
+      "partName": "345",
+      "fitsModel": "345",
+      "fitsBrand": "345",
+      "fitsYear": "345",
+      "id": 820
     }
   ]
 }

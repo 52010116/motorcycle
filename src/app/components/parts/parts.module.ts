@@ -19,6 +19,7 @@ import { PartCardComponent } from 'src/app/components/parts/parts-card/part-card
     declarations: [
       PartSearchComponent,
       PartCardComponent,
+      PartEditComponent
     ],
 
     providers: [],
