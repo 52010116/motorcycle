@@ -1,0 +1,22 @@
+{
+    "appointments": [
+        {
+            "id": 101,
+            "date": "13.03.22",
+            "motorcycle": "XT660",
+            "name": "Michael"
+        },
+        {
+            "id": 102,
+            "date": "24.3.22",
+            "motorcycle": "MT 07",
+            "name": "Dorian"
+        },
+        {
+            "id": 103,
+            "date": "27.4.22",
+            "motorcycle": "NX500",
+            "name": "Stefan"
+        }
+    ]
+}
