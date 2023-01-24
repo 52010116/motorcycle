@@ -5,11 +5,12 @@
     </div>
 
 
+
     <div class="card-body">
         <p>Brand.: {{item?.fitsBrand}}</p>
         <p>Model.: {{item?.fitsYear}}</p>
         <p>Year.: {{item?.fitsYear}}</p>
-        <p>ID.: {{item?.Id}}</p>
+        <p>ID.: {{item?.id}}</p>
 
             <button class="btn btn-default"
             *ngIf="!selected"
@@ -19,9 +20,11 @@
             *ngIf="selected"
             (click)="deselect()">Remove</button>
 
+        <button class="btn btn-default"
+            *ngIf="selected"
+            (click)="deletePart()">Delete</button>
 
-
-
+        
 
     </div>
  </div>

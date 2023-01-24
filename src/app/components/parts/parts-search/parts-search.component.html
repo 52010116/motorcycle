@@ -10,22 +10,97 @@
   </div>
 
 
+  <div class="form-group">
+  <button class="btn btn-default" (click)="search()" [disabled]="!partName || !fitsModel">
+    Search
+  </button>
+  <button
+    routerLink="/part-edit"
+    class="btn btn-default">
+    Edit
+  </button>
+  </div>
 
- <div class="form-group">
-    <button class="btn btn-default" (click)="search()" [disabled]="!partName || !fitsModel">
-      Search
-    </button>
- </div>
+  
 
+
+
+
+
+
+
+
+ 
+
+<h1>Create a new Sparepart entry</h1>
+  <div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="newPartName">Part Name</label>
+  
+          <input
+            type="text"
+            class="form-control"
+            id="partName"
+            required
+            [(ngModel)]="post.partName"
+            name="partName"/>
+        </div>
+  
+  
+        <div class="form-group">
+          <label for="fitsModel"> Fits Model</label>
+          <input
+            class="form-control"
+            id="fitsModel"
+            required
+            [(ngModel)]="post.fitsModel"
+            name="fitsModel"/>
+        </div>
+        <div class="form-group">
+          <label for="fitsYear"> Fits Year</label>
+          <input
+            class="form-control"
+            id="fitsYear"
+            required
+            [(ngModel)]="post.fitsYear"
+            name="fitsModel"/>
+        </div>
+        <div class="form-group">
+          <label for="fitsBrand"> Fits Brand</label>
+          <input
+            class="form-control"
+            id="fitsBrand"
+            required
+            [(ngModel)]="post.fitsBrand"
+            name="fitsBrand"/>
+        </div>
+  
+        <button (click)="createRequest()" class="btn btn-success">Save entry</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>successful!</h4>
+        
+      </div>
+  
+    </div>
+  </div>
 
   <div class="row">
     <div *ngFor="let p of parts"
         class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-        <app-part-card [item]="p" [(selected)]="basket[p.Id]">
+        <app-part-card [item]="p" [(selected)]="basket[p.id]">
         </app-part-card>
     </div>
-  </div>
+
+  
 
 
-  <b>Basket</b>
-  <pre>{{ basket | json }}</pre>
+
+    <div class="card">
+      <div class="card-body">
+        <pre>{{ basket | json }}</pre>
+      </div>
+    </div>

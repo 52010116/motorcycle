@@ -127,69 +127,127 @@
       "title": "Extra spare Key",
       "body": "Please give me an extra spare Key",
       "published": true
-    },
-    {
-      "title": "Send Help",
-      "body": "I need help asap",
-      "id": 101
     }
   ],
   "parts": [
     {
-      "Id": 123,
-      "partName": "clutch1",
-      "fitsBrand": "Honda1",
-      "fitsModel": "Civic",
-      "fitsYear": 2000
+      "id": 369,
+      "partName": "Clutch3",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
     },
     {
-      "Id": 124,
-      "partName": "clutch2",
-      "fitsBrand": "Honda2",
-      "fitsModel": "Civic",
-      "fitsYear": 2001
+      "id": 355,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
     },
     {
-      "Id": 125,
-      "partName": "clutch3",
-      "fitsBrand": "Hond3",
-      "fitsModel": "Civ",
-      "fitsYear": 2002
+      "id": 375,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
     },
     {
-      "Id": 126,
-      "partName": "clutch4",
-      "fitsBrand": "Honda4",
-      "fitsModel": "Civic",
-      "fitsYear": 2003
+      "id": 395,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
     },
     {
-      "Id": 127,
-      "partName": "clutch1",
-      "fitsBrand": "Honda1",
-      "fitsModel": "Civic",
-      "fitsYear": 2000
+      "id": 312,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
     },
     {
-      "Id": 128,
-      "partName": "clutch2",
-      "fitsBrand": "Honda2",
-      "fitsModel": "Civic",
-      "fitsYear": 2001
+      "id": 819,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
     },
     {
-      "Id": 129,
-      "partName": "clutch3",
-      "fitsBrand": "Hond3",
-      "fitsModel": "Civ",
-      "fitsYear": 2002
+      "id": 628,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
     },
     {
-      "Id": 130,
-      "partName": "clutch4",
-      "fitsBrand": "Honda4",
-      "fitsModel": "Civic",
-      "fitsYear": 2003
+      "id": 337,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 301,
+      "partName": "Clutch",
+      "fitsBrand": "Husqvarna",
+      "fitsModel": "Vitpilen 701",
+      "fitsYear": 2020
+    },
+    {
+      "id": 303,
+      "partName": "Akrapovic Exhaust",
+      "fitsBrand": "Yamaha",
+      "fitsModel": "MT09",
+      "fitsYear": 2019
+    },
+    {
+      "id": 304,
+      "partName": "Water Cooler",
+      "fitsBrand": "BMW",
+      "fitsModel": "GS1250",
+      "fitsYear": 2014
+    },
+    {
+      "id": 305,
+      "partName": "Sidestand",
+      "fitsBrand": "Kawasaki",
+      "fitsModel": "H2R",
+      "fitsYear": 2022
+    },
+    {
+      "id": 306,
+      "partName": "Sidestand",
+      "fitsBrand": "Yamaha",
+      "fitsModel": "MT125",
+      "fitsYear": 2013
+    },
+    {
+      "id": 307,
+      "partName": "Seat",
+      "fitsBrand": "Aprilia",
+      "fitsModel": "Dorsoduro",
+      "fitsYear": 2018
+    },
+    {
+      "partName": "adawdawd",
+      "fitsModel": "awdawdasda",
+      "fitsBrand": "scadqad",
+      "fitsYear": "adxcad",
+      "id": 319
+    },
+    {
+      "partName": "Fork",
+      "fitsModel": "640 ",
+      "fitsBrand": "KTM",
+      "fitsYear": "2003",
+      "id": 331
+    },
+    {
+      "partName": "345",
+      "fitsModel": "345",
+      "fitsBrand": "345",
+      "fitsYear": "345",
+      "id": 820
     }
   ]
 }

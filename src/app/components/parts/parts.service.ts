@@ -9,26 +9,42 @@ import { SpareParts } from 'src/app/components/entities/parts';
 export class PartService  {
 
   constructor(private http: HttpClient) { }
+    url = 'http://localhost:3000/parts';
+  
 
   find(partName: string, fitsModel: string): Observable<SpareParts[]> {
 
-    // server mit dem befehl installieren: npm install -g json-server
-    // server mit dem befehl starten: json-server --watch db.json
+
     const url = 'http://localhost:3000/parts';
 
-    // definiert welches Datenformat akzeptiert wird
+
     const headers = new HttpHeaders()
         .set('Accept', 'application/json');
 
 
-    //Die Aufrufe von set die aktuelle Auflistung nicht verändern, sondern eine neue Auflistung zurückliefern.
-    //Deswegen verkettet das Beispiel auch die einzelnen Aufrufe von set.
+
     const params = new HttpParams()
         .set('partName', partName)
         .set('fitsModel', fitsModel);
-        //.set('hp', hp)
-        //.set('model', model)
+
 
     return this.http.get<SpareParts[]>(url, {headers, params});
-  }
+
+
+    
+    }
+
+
+
+    removePartEntry(SpareParts: any):Observable<SpareParts> {
+      const headers = new HttpHeaders()
+        .set('Accept', 'application/json');
+      return this.http.delete<SpareParts>(this.url+"/"+SpareParts.id, {headers})
+    }
+    createPost(data: any): Observable<any> {
+      return this.http.post('http://localhost:3000/parts', data);
+    }
+    updatePost(id: any, data: any): Observable<any> {
+      return this.http.put(`${'http://localhost:3000/parts'}/${id}`, data);
+  } 
 }

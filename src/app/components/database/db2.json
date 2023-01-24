@@ -1,0 +1,116 @@
+{
+"parts": [
+    {
+      "id": 369,
+      "partName": "Clutch3",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 355,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 375,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 395,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 312,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 819,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 628,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 337,
+      "partName": "Clutch",
+      "fitsBrand": "KTM",
+      "fitsModel": "690 SMCR",
+      "fitsYear": 2018
+    },
+    {
+      "id": 301,
+      "partName": "Clutch",
+      "fitsBrand": "Husqvarna",
+      "fitsModel": "Vitpilen 701",
+      "fitsYear": 2020
+    },
+    {
+      "id": 303,
+      "partName": "Akrapovic Exhaust",
+      "fitsBrand": "Yamaha",
+      "fitsModel": "MT09",
+      "fitsYear": 2019
+    },
+    {
+      "id": 304,
+      "partName": "Water Cooler",
+      "fitsBrand": "BMW",
+      "fitsModel": "GS1250",
+      "fitsYear": 2014
+    },
+    {
+      "id": 305,
+      "partName": "Sidestand",
+      "fitsBrand": "Kawasaki",
+      "fitsModel": "H2R",
+      "fitsYear": 2022
+    },
+    {
+      "id": 306,
+      "partName": "Sidestand",
+      "fitsBrand": "Yamaha",
+      "fitsModel": "MT125",
+      "fitsYear": 2013
+    },
+    {
+      "id": 307,
+      "partName": "Seat",
+      "fitsBrand": "Aprilia",
+      "fitsModel": "Dorsoduro",
+      "fitsYear": 2018
+    },
+    {
+      "partName": "adawdawd",
+      "fitsModel": "awdawdasda",
+      "fitsBrand": "scadqad",
+      "fitsYear": "adxcad",
+      "id": 319
+    },
+    {
+      "partName": "Fork",
+      "fitsModel": "640 ",
+      "fitsBrand": "KTM",
+      "fitsYear": "2003",
+      "id": 331
+    }
+]
+}

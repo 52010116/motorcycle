@@ -12,14 +12,22 @@ import { PartService } from '../parts.service';
 
 export class PartSearchComponent implements OnInit {
 
-  partName = '';
-  fitsModel = '';
+  partName = 'Clutch';
+  fitsModel = '690 SCMR';
 
+  post: SpareParts = {
+    id: '',
+    partName: '',
+    fitsModel: '',
+    fitsBrand: '',
+    fitsYear: ''
+  };
 
-  //Das motorcycle Array nimmt die gefundenen bikes auf. Es ist mit dem zu erzeugten Interface Motorcycle typisiert.
+  submitted = false;
+  
   parts: Array<SpareParts> = [];
 
-  //Die Eigenschaft selectedMotorcycle repräsentiert den ausgewählten bike. Initialwert = 0
+  
   selectedPart: SpareParts | null = null;
 
 
@@ -31,17 +39,16 @@ export class PartSearchComponent implements OnInit {
 
 
 
-  // HttpClient anfordern Dependency Injection Dependency Injection bzw. Constructor Injection:
+  
   constructor(private partService: PartService) {
   }
 
 
-  // Diese Methode ruft Angular nach dem Initialisieren der Komponente auf,
-  // und somit kann sie für Initialisierungen von Eigenschaften verwendet werden.
+ 
   ngOnInit(): void {
   }
 
-  //Die Methode search kümmert sich um das Abrufen der Bikes.
+ 
   search(): void {
 
     this.partService.find(this.partName, this.fitsModel).subscribe({
@@ -51,11 +58,36 @@ export class PartSearchComponent implements OnInit {
     });
 
   }
+  createRequest(): void {
+    const data = {
+      partName: this.post.partName,
+      fitsModel: this.post.fitsModel,
+      fitsBrand: this.post.fitsBrand,
+      fitsYear: this.post.fitsYear
 
-  // Die Methode select notiert sich den vom Benutzer ausgewähltes Bike
+    };
+
+    this.partService.createPost(data)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.submitted = true;
+        }
+      });
+  }
+
+  newPost(): void {
+    this.submitted = false
+    this.post = {
+      partName: '',
+      fitsModel: '',
+      fitsBrand: '',
+      fitsYear: '',
+    };
+  }
+  
   select(p: SpareParts): void{
     this.selectedPart = p;
   }
-
 }
 

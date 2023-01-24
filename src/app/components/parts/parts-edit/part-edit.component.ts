@@ -1,24 +1,33 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
-    selector: 'app-part-edit',
-    templateUrl: './part-edit.component.html',
-    styleUrls: ['./part-edit.component.css']
+  selector: 'app-part-edit',
+  templateUrl: './part-edit.component.html',
+  styleUrls: ['./part-edit.component.css']
 })
-
 export class PartEditComponent implements OnInit {
+  editForm = this.fb.nonNullable.group({
+    id: [0],
+    partName: ['clutch',],
+    fitsModel: ['yamaha'],
+    fitsYear: ['2019'],
+  })
+  
 
-  id = 0;
-  showDetails = false;
-
-  constructor(private route: ActivatedRoute) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(p => {
-      this.id = p['id'];
-      this.showDetails = p['showDetails'];
-    });
+    this.editForm.valueChanges
+      .subscribe(console.log);
   }
 
+  save(): void {
+      console.log('value', this.editForm.value)
+      console.log('dirty', this.editForm.dirty)
+      console.log()
+  }
 }
