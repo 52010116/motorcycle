@@ -1,7 +1,12 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Motorcycle } from 'src/app/components/entities/motorcycle';
+import { Appointments } from '../../entities/appointments';
 import { AppointmentService } from '../appointment.service';
+
+interface SearchCriteria {
+  motorcycle: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-appointment-search',
@@ -10,48 +15,32 @@ import { AppointmentService } from '../appointment.service';
 })
 export class AppointmentSearchComponent implements OnInit {
 
-  brand = 'Yamaha';
-  year = '2009';
-  // model = 'XT 660'
-  // hp = '48
+  motorcycle = '690SMCR';
+  name = 'Maxl';
 
-  //Das motorcycle Array nimmt die gefundenen bikes auf. Es ist mit dem zu erzeugten Interface Motorcycle typisiert.
-  motorcycles: Array<Motorcycle> = [];
+  appointments: Array<Appointments> = [];
 
-  //Die Eigenschaft selectedMotorcycle repräsentiert den ausgewählten bike. Initialwert = 0
-  selectedMotorcycle: Motorcycle | null = null;
-
-  // valid inspection Option (checkbox)
-  // implementierung falls zeit über bleibt
-  //valid_inspectionFilter = true;
-
-
-  basket: { [key: number]: boolean } = {
-
-  };
+  selectedAppointment: Appointments | null = null;
 
 
 
-  // HttpClient anfordern Dependency Injection Dependency Injection bzw. Constructor Injection:
-  constructor(private appointmentService: AppointmentService) {
-  }
+  basket: { [key: number]: boolean } = {};
 
 
-  // Diese Methode ruft Angular nach dem Initialisieren der Komponente auf,
-  // und somit kann sie für Initialisierungen von Eigenschaften verwendet werden.
+  constructor(private appointmentService: AppointmentService) {}
+
   ngOnInit(): void {
   }
 
-  //Die Methode search kümmert sich um das Abrufen der Bikes.
   search(): void {
-    this.appointmentService.findMotorcycle(this.brand, this.year).subscribe({
-      next: (motorcycles) => {
-        this.motorcycles = motorcycles
+    const searchCriteria: SearchCriteria = { motorcycle: this.motorcycle, name: this.name };
+    this.appointmentService.findAppointment(searchCriteria).subscribe({
+      next: (appointments) => {
+        this.appointments = appointments;
+      },
+      error: (error) => {
+        console.log(error);
       }
     });
-
   }
-
-
 }
-

@@ -1,22 +1,64 @@
 {
-    "appointments": [
-        {
-            "id": 101,
-            "date": "13.03.22",
-            "motorcycle": "XT660",
-            "name": "Michael"
-        },
-        {
-            "id": 102,
-            "date": "24.3.22",
-            "motorcycle": "MT 07",
-            "name": "Dorian"
-        },
-        {
-            "id": 103,
-            "date": "27.4.22",
-            "motorcycle": "NX500",
-            "name": "Stefan"
-        }
-    ]
+"appointments": [
+    {
+      "motorcycle": "XT660",
+      "name": "Michael",
+      "date": "13.03.22",
+      "id": 101
+    },
+    {
+      "motorcycle": "MT 07",
+      "name": "Dorian",
+      "date": "24.3.22",
+      "id": 102
+    },
+    {
+      "motorcycle": "NX500",
+      "name": "Stefan",
+      "date": "27.4.22",
+      "id": 103
+    },
+    {
+      "motorcycle": "GSX-R1000",
+      "name": "Julia",
+      "date": "05.05.22",
+      "id": 104
+    },
+    {
+      "motorcycle": "KTM 390 Duke",
+      "name": "Lena",
+      "date": "15.06.22",
+      "id": 105
+    },
+    {
+      "motorcycle": "Harley Davidson Street 750",
+      "name": "Max",
+      "date": "20.07.22",
+      "id": 106
+    },
+    {
+      "motorcycle": "BMW S1000 RR",
+      "name": "Anna",
+      "date": "25.08.22",
+      "id": 107
+    },
+    {
+      "motorcycle": "Triumph Tiger 900",
+      "name": "Tom",
+      "date": "30.09.22",
+      "id": 108
+    },
+    {
+      "motorcycle": "Ducati Panigale V4",
+      "name": "Lukas",
+      "date": "10.10.22",
+      "id": 109
+    },
+    {
+      "motorcycle": "Honda CBR1000RR-R Fireblade SP",
+      "name": "Nina",
+      "date": "20.11.22",
+      "id": 110
+    }
+ ]
 }

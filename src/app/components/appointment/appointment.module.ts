@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppointmentSearchComponent } from './appointment-search/appointment-search.component';
 import { AppointmentCardComponent } from './appointment-card/appointment-card.component';
 import { AppointmentRequestComponent } from './appointment-edit/appointment-request.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports:[
@@ -15,6 +17,8 @@ import { AppointmentRequestComponent } from './appointment-edit/appointment-requ
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forChild(APPOINTMENT_ROUTES),
+        BrowserModule,
+        HttpClientModule,
     ],
 
     declarations: [

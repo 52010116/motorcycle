@@ -61,18 +61,6 @@
       "next_service": "2023-01-30"
     },
     {
-      "id": 165,
-      "brand": "Yamaha",
-      "model": "MT 03",
-      "year": "2009",
-      "hp": "48",
-      "ccm": "660",
-      "kilometers": 18760,
-      "valid_inspection": false,
-      "next_inspection": "2022-08-23",
-      "next_service": "2023-01-30"
-    },
-    {
       "id": 102,
       "brand": "Yamaha",
       "model": "Tenere 700",
@@ -248,6 +236,68 @@
       "fitsBrand": "345",
       "fitsYear": "345",
       "id": 820
+    }
+  ],
+  "appointments": [
+    {
+      "motorcycle": "XT660",
+      "name": "Michael",
+      "date": "13.03.22",
+      "id": 101
+    },
+    {
+      "motorcycle": "MT07",
+      "name": "Dorian",
+      "date": "24.3.22",
+      "id": 102
+    },
+    {
+      "motorcycle": "NX500",
+      "name": "Stefan",
+      "date": "27.4.22",
+      "id": 103
+    },
+    {
+      "motorcycle": "GSX-R1000",
+      "name": "Julia",
+      "date": "05.05.22",
+      "id": 104
+    },
+    {
+      "motorcycle": "KTM 390 Duke",
+      "name": "Lena",
+      "date": "15.06.22",
+      "id": 105
+    },
+    {
+      "motorcycle": "Harley Davidson Street 750",
+      "name": "Max",
+      "date": "20.07.22",
+      "id": 106
+    },
+    {
+      "motorcycle": "BMW S1000 RR",
+      "name": "Anna",
+      "date": "25.08.22",
+      "id": 107
+    },
+    {
+      "motorcycle": "Triumph Tiger 900",
+      "name": "Tom",
+      "date": "30.09.22",
+      "id": 108
+    },
+    {
+      "motorcycle": "Ducati Panigale V4",
+      "name": "Lukas",
+      "date": "10.10.22",
+      "id": 109
+    },
+    {
+      "motorcycle": "Honda CBR1000RR-R Fireblade SP",
+      "name": "Nina",
+      "date": "20.11.22",
+      "id": 110
     }
   ]
 }

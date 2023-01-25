@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Post } from '../../entities/post';
-import { Motorcycle } from 'src/app/components/entities/motorcycle';
 import { AppointmentService } from '../appointment.service';
 
 @Component({
@@ -33,22 +32,23 @@ export class AppointmentRequestComponent implements OnInit {
       body: this.post.body
     };
 
-    this.appointmentService.createPost(data)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.submitted = true;
-        }
-      });
-  }
+  //   this.appointmentService.createPost(data)
+  //     .subscribe({
+  //       next: (res) => {
+  //         console.log(res);
+  //         this.submitted = true;
+  //       }
+  //     });
+  // }
 
-  newPost(): void {
-    this.submitted = false;
-    this.post = {
-      title: '',
-      body: ''
-    };
-  }
+  // newPost(): void {
+  //   this.submitted = false;
+  //   this.post = {
+  //     title: '',
+  //     body: ''
+  //   };
+  // }
 
 
+}
 }

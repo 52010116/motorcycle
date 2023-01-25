@@ -1,24 +1,26 @@
-<h1>Search for your motorcycles</h1>
+<h1> Search for Appointments assigned to your and your loved one </h1>
+<h4> atm. no dates available ¯\_( ͡° ͜ʖ ͡°)_/¯</h4>
+<h6> If there is no Appointment -> The Online-Service will be available soon!</h6>
 
   <div class="form-group">
-    <label>Brand:</label>
-    <input [(ngModel)]="brand" name="Brand" class="form-control">
+    <label>Motorcycle:</label>
+    <input [(ngModel)]="motorcycle" name="string" class="form-control">
   </div>
   <div class="form-group">
-    <label>Year:</label>
-    <input [(ngModel)]="year" name="Year" class="form-control">
+    <label>Name:</label>
+    <input [(ngModel)]="name" name="string" class="form-control">
   </div>
 
 
  <div class="form-group">
-    <button class="btn btn-default" (click)="search()" [disabled]="!brand || !year">
+    <button class="btn btn-default" (click)="search()" [disabled]="!appointments|| !name">
       Search
     </button>
  </div>
 
 
   <div class="row">
-    <div *ngFor="let m of motorcycles"
+    <div *ngFor="let m of appointments"
         class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
         <app-appointment-card [item]="m" [(selected)]="basket[m.id]">
         </app-appointment-card>

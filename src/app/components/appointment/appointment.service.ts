@@ -2,14 +2,19 @@
 
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ApplicationConfig } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { Motorcycle } from 'src/app/components/entities/motorcycle';
+import { Appointments } from '../entities/appointments';
 import { Post } from '../entities/post';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppointmentService  {
+  AppointmentEntry(item: Appointments | null) {
+    throw new Error('Method not implemented.');
+  }
 
 
   constructor(private http: HttpClient) { }
@@ -17,60 +22,56 @@ export class AppointmentService  {
 
   // server mit dem befehl installieren: npm install -g json-server
   // server mit dem befehl starten: json-server --watch db.json
-  url = 'http://localhost:3000/motorcycles';
+  url = 'http://localhost:3000/appointments';
 
-  findMotorcycle(brand: string, year: string): Observable<Motorcycle[]> {
+  findAppointment({ motorcycle, name }: { motorcycle: string; name: string; }): Observable<Appointments[]> {
 
 
 
-    // definiert welches Datenformat akzeptiert wird
     const headers = new HttpHeaders()
         .set('Accept', 'application/json');
 
 
-    //Die Aufrufe von set die aktuelle Auflistung nicht verändern, sondern eine neue Auflistung zurückliefern.
-    //Deswegen verkettet das Beispiel auch die einzelnen Aufrufe von set.
+
     const params = new HttpParams()
-        .set('brand', brand)
-        .set('year', year);
-        //.set('hp', hp)
-        //.set('model', model)
+        .set('motorcycle', motorcycle)
+        .set('name', name);
+        // .set('date', date);
+        // .set('id', id)
 
-    return this.http.get<Motorcycle[]>(this.url, {headers, params});
+    return this.http.get<Appointments[]>(this.url, {headers, params});
   }
 
 
 
-  removeMotorcycleEntry(Motorcycle: any):Observable<Motorcycle> {
+  removeAppointmentEntry(Appointments: any):Observable<Appointments> {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
-    return this.http.delete<Motorcycle>(this.url+"/"+Motorcycle.id, {headers});
+    return this.http.delete<Appointments>(this.url+"/"+Appointments.id, {headers});
   }
 
 
 
-  createNewMotorcycle(Motorcycle: any):Observable<Motorcycle> {
-    const headers = new HttpHeaders()
-      .set('Accept', 'application/json');
-    return this.http.post<Motorcycle>(this.url+"/"+Motorcycle.brand, Motorcycle.year, {headers})
-  }
+  // createNewAppointment(Appointments: any):Observable<Appointments> {
+  //   const headers = new HttpHeaders()
+  //     .set('Accept', 'application/json');
+  //   return this.http.post<Appointments>(this.url+"/"+Appointments.brand, Appointments.year, {headers})
+  // }
 
-
-  // edit db Entry
-  updateMotorcycle(selectedBike: any):Observable<Motorcycle> {
-    const headers = new HttpHeaders()
-      .set('Accept', 'application/json');
-    return this.http.put<Motorcycle>(this.url+"/"+selectedBike.id, selectedBike, {headers})
-  }
+  // updateAppointment(selectedAppointment: any):Observable<Appointments> {
+  //   const headers = new HttpHeaders()
+  //     .set('Accept', 'application/json');
+  //   return this.http.put<Appointments>(this.url+"/"+selectedAppointment.id, selectedAppointment, {headers})
+  // }
 
 
 
-  createPost(data: any): Observable<any> {
-    return this.http.post('http://localhost:3000/posts', data);
-  }
+//   createPost(data: any): Observable<any> {
+//     return this.http.post('http://localhost:3000/post', data);
+//   }
 
-  updatePost(id: any, data: any): Observable<any> {
-    return this.http.put(`${'http://localhost:3000/posts'}/${id}`, data);
-  }
+//   updatePost(id: any, data: any): Observable<any> {
+//     return this.http.put(`${'http://localhost:3000/posts'}/${id}`, data);
+//   }
 
 }
