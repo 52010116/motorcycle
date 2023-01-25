@@ -8,6 +8,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RentSearchComponent } from './rent-search/rent-search.component';
 import { RentCardComponent } from './rent-card/rent-card.component';
 import { RentRequestComponent } from './rent-request/rent-request.component';
+import { RentRequestEditComponent } from './rent-request-edit/rent-request-edit.component';
+
+
+
 
 @NgModule({
     imports:[
@@ -20,7 +24,8 @@ import { RentRequestComponent } from './rent-request/rent-request.component';
     declarations: [
       RentSearchComponent,
       RentCardComponent,
-      RentRequestComponent
+      RentRequestComponent,
+      RentRequestEditComponent
     ],
 
     providers: [],

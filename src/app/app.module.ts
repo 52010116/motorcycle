@@ -1,5 +1,5 @@
 
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -13,6 +13,8 @@ import { RentModule } from './components/rent/rent.module';
 import { HomeComponent } from './components/home/home.component';
 import { PartModule } from './components/parts/parts.module';
 import { CommonModule } from '@angular/common';
+import { AppointmentModule } from './components/appointment/appointment.module';
+
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     RentModule,
     PartModule,
+    AppointmentModule,
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
   ],

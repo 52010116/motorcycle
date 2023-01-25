@@ -1,16 +1,15 @@
 
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Motorcycle } from 'src/app/components/entities/motorcycle';
-import { RentSearchComponent } from '../rent-search/rent-search.component';
-import { RentService } from '../rent.service';
-
+import { AppointmentSearchComponent } from '../appointment-search/appointment-search.component';
+import { AppointmentService } from '../appointment.service';
 
 @Component({
-  selector: 'app-rent-card',
-  templateUrl: './rent-card.component.html',
-  styleUrls: ['./rent-card.component.css']
+  selector: 'app-appointment-card',
+  templateUrl: './appointment-card.component.html',
+  styleUrls: ['./appointment-card.component.css']
 })
-export class RentCardComponent {
+export class AppointmentCardComponent {
 
 
   //Der Input-Dekorator dekoriert sämtliche Eigenschaften, welche die Komponente von ihrem Parent entgegennimmt.
@@ -33,14 +32,19 @@ export class RentCardComponent {
 
 
   // HttpClient via Dependency Injection
-  constructor(private rentService: RentService) {
+  constructor(private appointmentService: AppointmentService) {
   }
   // löscht ausgewählte Karte aus db
   deleteChoice(): void{
-    this.rentService
+    this.appointmentService
       .removeMotorcycleEntry(this.item)
       .subscribe()
 
   }
 
+  // Eintrag bearbeiten
+  editEntry(): void{
+    this.appointmentService
+      .updateMotorcycle(this.selected)
+  }
 }

@@ -125,12 +125,8 @@
     {
       "id": 100,
       "title": "Extra spare Key",
-      "body": "Please give me an extra spare Key"
-    },
-    {
-      "id": 101,
-      "title": "Extra spare tire",
-      "body": "Please give me an extra spare tire"
+      "body": "Please give me an extra spare Key",
+      "published": true
     }
   ],
   "parts": [

@@ -1,12 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 import { Post } from '../../entities/post';
-import { Motorcycle } from 'src/app/components/entities/motorcycle';
 import { RentService } from '../rent.service';
-
 
 @Component({
   selector: 'app-rent-edit',
@@ -18,14 +13,15 @@ import { RentService } from '../rent.service';
 export class RentRequestComponent implements OnInit {
 
   post: Post = {
-    id: '',
     title: '',
-    body: ''
+    body: '',
+    published: false
   };
   submitted = false;
 
   constructor(private rentService: RentService) {
   }
+
   ngOnInit(): void {
   }
 
@@ -48,32 +44,10 @@ export class RentRequestComponent implements OnInit {
     this.submitted = false;
     this.post = {
       title: '',
-      body: ''
+      body: '',
+      published: false
     };
   }
 
 
-
-  /*
-  // Neuen Eintrag hinzufügen
-  newEntry(): void{
-    this.rentService
-      .createNewMotorcycle
-      .subscribe()
-  }
-
-
-  newItem: any = {
-  }
-
-
-
-  // löscht ausgewählte Karte aus db
-  createRequest(): void{
-    this.rentService
-      .createPost
-
-
-  }
-*/
 }

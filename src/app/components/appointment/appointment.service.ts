@@ -9,7 +9,7 @@ import { Post } from '../entities/post';
 @Injectable({
   providedIn: 'root'
 })
-export class RentService  {
+export class AppointmentService  {
 
 
   constructor(private http: HttpClient) { }
@@ -48,34 +48,29 @@ export class RentService  {
   }
 
 
-  updateMotorcycle(Motorcycle: any): Observable<Motorcycle> {
-    const headers = new HttpHeaders()
-      .set('Accept', 'application/json');
-    return this.http.put<Motorcycle>(this.url+"/"+Motorcycle.brand, Motorcycle.year, {headers});
-  }
 
-
-  createPost(data: any): Observable<any> {
-    return this.http.post('http://localhost:3000/posts', data);
-  }
-
-
-
-
-  // used for not yet implemented functionality
   createNewMotorcycle(Motorcycle: any):Observable<Motorcycle> {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json');
     return this.http.post<Motorcycle>(this.url+"/"+Motorcycle.brand, Motorcycle.year, {headers})
   }
 
-  // used for not yet implemented functionality
+
+  // edit db Entry
+  updateMotorcycle(selectedBike: any):Observable<Motorcycle> {
+    const headers = new HttpHeaders()
+      .set('Accept', 'application/json');
+    return this.http.put<Motorcycle>(this.url+"/"+selectedBike.id, selectedBike, {headers})
+  }
+
+
+
+  createPost(data: any): Observable<any> {
+    return this.http.post('http://localhost:3000/posts', data);
+  }
+
   updatePost(id: any, data: any): Observable<any> {
     return this.http.put(`${'http://localhost:3000/posts'}/${id}`, data);
   }
 
-  // used for not yet implemented functionality
-  getPost(id: any): Observable<Post> {
-    return this.http.get<Post>(`${'http://localhost:3000/posts'}/${id}`);
-  }
 }
