@@ -12,8 +12,8 @@ import { PartService } from '../parts.service';
 
 export class PartSearchComponent implements OnInit {
 
-  partName = 'Clutch';
-  fitsModel = '690 SCMR';
+  partName = '';
+  fitsModel = '';
 
   post: SpareParts = {
     id: '',
