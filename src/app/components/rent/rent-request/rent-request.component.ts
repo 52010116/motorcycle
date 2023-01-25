@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
 import { Post } from '../../entities/post';
 import { RentService } from '../rent.service';
 

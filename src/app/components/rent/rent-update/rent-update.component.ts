@@ -1,7 +1,5 @@
-
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Motorcycle } from 'src/app/components/entities/motorcycle';
-import { RentSearchComponent } from '../rent-search/rent-search.component';
 import { RentService } from '../rent.service';
 
 @Component({
@@ -14,9 +12,10 @@ export class RentUpdateComponent implements OnInit {
   // Rent-Update war ein Versuch, welcher nicht geglückt ist...
 
 
-  //Der Input-Dekorator dekoriert sämtliche Eigenschaften, welche die Komponente von ihrem Parent entgegennimmt.
+  // Input Binding zum Erfassen von Daten von der Parent-Komponente.
   @Input() item: Motorcycle | null = null;
   @Input() selectedEdit = false;
+  // Output Binding sendet als Child-Komponente and Parent
   @Output() selectedChange = new EventEmitter<boolean>();
 
 
@@ -33,6 +32,7 @@ export class RentUpdateComponent implements OnInit {
   }
 
   /*
+  // ab hier nicht funktionstüchtig
   //brand und year ändern
   editChoice(): void {
     const updatedMotorcycle = {this.brand, this.year};
