@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router  } from '@angular/router';
 
 import { Post } from '../../entities/post';
 import { RentService } from '../rent.service';
@@ -11,41 +10,28 @@ import { RentService } from '../rent.service';
 })
 export class RentRequestEditComponent implements OnInit {
 
-
-  @Input() viewMode = false;
-
+  // Struktur wird vom Parent gegeben
   @Input() currentPost: Post = {
     title: '',
-    body: '',
-    published: false
+    body: ''
   };
-  message = '';
 
-
-  constructor(private rentService: RentService,
-    private route: ActivatedRoute,
-    private router: Router) {
+  // "importieren und deklarieren" des RentService
+  constructor(private rentService: RentService) {
   }
-
 
   ngOnInit(): void {
-    if (!this.viewMode) {
-      this.message = '';
-      this.getRequest(this.route.snapshot.params["id"]);
-    }
+
   }
 
+  // gespeicherte Requests werden von db geladen
   getRequest(id: string): void {
     this.rentService.getPost(id)
-      .subscribe({
-        next: (data) => {
-          this.currentPost = data;
-          console.log(data);
-        },
-      });
+      .subscribe()
   }
 
 
+  //Titel und Description werden mit current überschrieben
   updatePublished(status: boolean): void {
     const data = {
       title: this.currentPost.title,
@@ -53,32 +39,13 @@ export class RentRequestEditComponent implements OnInit {
       published: status
     };
 
-
-    this.rentService.updatePost(this.currentPost.id, data)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.currentPost.published = status;
-          this.message = res.message ? res.message : 'The status was updated successfully!';
-        },
-      });
-  }
-
-
-  updateRequest(): void {
-    this.message = '';
-
+    // Methode im Service wird für PUT aufgerufen
     this.rentService.updatePost(this.currentPost.id, this.currentPost)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.message = res.message ? res.message : 'This tutorial was updated successfully!';
-        },
-      });
+      .subscribe()
   }
 
 }
 
-//currenttutorial
+
 
 
