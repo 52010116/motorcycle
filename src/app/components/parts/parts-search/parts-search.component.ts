@@ -11,10 +11,10 @@ import { PartService } from '../parts.service';
 })
 
 export class PartSearchComponent implements OnInit {
-
-  partName = 'Clutch';
-  fitsModel = '690 SCMR';
-
+//speichern der suchkriterien für partName und fitsModel
+  partName = '';
+  fitsModel = '';
+//post vom typ Spareparts, speichern der Daten von neuem Ersatzteil
   post: SpareParts = {
     id: '',
     partName: '',
@@ -22,9 +22,9 @@ export class PartSearchComponent implements OnInit {
     fitsBrand: '',
     fitsYear: ''
   };
-
+//status der form-übermittlung,
   submitted = false;
-  
+//speichern der suchergebnisse
   parts: Array<SpareParts> = [];
 
   
@@ -39,7 +39,7 @@ export class PartSearchComponent implements OnInit {
 
 
 
-  
+  //KOnstruktor nimmt PartService entgegen, für suche usw nötig
   constructor(private partService: PartService) {
   }
 
@@ -48,7 +48,8 @@ export class PartSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
- 
+ //Search dient der Suche nach spareparts auf grundlage von partName und fitsModel
+ //ruft find-methode des partservie auf die ein observable zurückgibt => suchergebnisse werden ausgegeben
   search(): void {
 
     this.partService.find(this.partName, this.fitsModel).subscribe({
@@ -58,7 +59,9 @@ export class PartSearchComponent implements OnInit {
     });
 
   }
-  createRequest(): void {
+
+  // CreateNewPart für neue Ersatzteile 
+  createNewPart(): void {
     const data = {
       partName: this.post.partName,
       fitsModel: this.post.fitsModel,
@@ -66,7 +69,8 @@ export class PartSearchComponent implements OnInit {
       fitsYear: this.post.fitsYear
 
     };
-
+// createPost Methode ruft PartService auf, die eine Anfrage zur Erstellung des neuen Ersatzteils sendet
+// gibt Observable zurück
     this.partService.createPost(data)
       .subscribe({
         next: (res) => {
@@ -76,15 +80,17 @@ export class PartSearchComponent implements OnInit {
       });
   }
 
-  newPost(): void {
-    this.submitted = false
-    this.post = {
-      partName: '',
-      fitsModel: '',
-      fitsBrand: '',
-      fitsYear: '',
-    };
-  }
+  
+
+// CreateNewFormular(): void {
+//   this.submitted = false
+//   this.post = {
+//     partName: '',
+//     fitsModel: '',
+//     fitsBrand: '',
+//     fitsYear: '',
+//   };
+// }
   
   select(p: SpareParts): void{
     this.selectedPart = p;

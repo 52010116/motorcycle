@@ -1,7 +1,5 @@
-
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Motorcycle } from 'src/app/components/entities/motorcycle';
-import { RentSearchComponent } from '../rent-search/rent-search.component';
 import { RentService } from '../rent.service';
 
 
@@ -13,28 +11,29 @@ import { RentService } from '../rent.service';
 export class RentCardComponent {
 
 
-  //Der Input-Dekorator dekoriert sämtliche Eigenschaften, welche die Komponente von ihrem Parent entgegennimmt.
+  // Input Binding zum Erfassen von Daten von der Parent-Komponente.
   @Input() item: Motorcycle | null = null;
   @Input() selected = false;
+  // Output Binding sendet als Child-Komponente and Parent
   @Output() selectedChange = new EventEmitter<boolean>();
   feedback = "";
 
-  //select wählt die Karte aus
+  // HttpClient via Dependency Injection
+  constructor(private rentService: RentService) {
+  }
+
+  // wählt eine Motorradkarte aus
   select() {
    this.selected = true
    this.selectedChange.emit(true);
   }
 
-  //deselect hebt diese Auswahl wieder auf
+  // hebt diese Auswahl wieder auf
   removeChoice() {
     this.selected = false
     this.selectedChange.emit(false);
   }
 
-
-  // HttpClient via Dependency Injection
-  constructor(private rentService: RentService) {
-  }
   // löscht ausgewählte Karte aus db
   deleteChoice(): void{
     this.rentService

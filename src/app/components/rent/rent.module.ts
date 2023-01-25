@@ -9,6 +9,7 @@ import { RentSearchComponent } from './rent-search/rent-search.component';
 import { RentCardComponent } from './rent-card/rent-card.component';
 import { RentRequestComponent } from './rent-request/rent-request.component';
 import { RentRequestEditComponent } from './rent-request-edit/rent-request-edit.component';
+import { RentUpdateComponent } from './rent-update/rent-update.component';
 
 
 
@@ -25,7 +26,8 @@ import { RentRequestEditComponent } from './rent-request-edit/rent-request-edit.
       RentSearchComponent,
       RentCardComponent,
       RentRequestComponent,
-      RentRequestEditComponent
+      RentRequestEditComponent,
+      RentUpdateComponent
     ],
 
     providers: [],

@@ -12,7 +12,7 @@
         <p>Hp.: {{item?.hp}}</p>
         <p>Ccm.: {{item?.ccm}}</p>
         <p>Kilometers.: {{item?.kilometers}}</p>
-        <p [ngStyle]="{ 'color': item?.valid_inspection }">Valid Inspection: {{ item?.valid_inspection }}</p>
+
         <p>
           <button class="btn btn-default"
             *ngIf="!selected"
@@ -25,11 +25,6 @@
           <button class="btn btn-default"
             *ngIf="selected"
             (click)="deleteChoice()">Delete</button>
-
-
-
-
-
         </p>
 
     </div>
