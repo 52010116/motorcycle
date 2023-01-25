@@ -1,4 +1,3 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Motorcycle } from 'src/app/components/entities/motorcycle';
 import { RentService } from '../rent.service';
@@ -21,16 +20,13 @@ export class RentSearchComponent implements OnInit {
   // selectedMotorcycle = ausgewähltes Motorrad. Initialwert = 0
   selectedMotorcycle: Motorcycle | null = null;
 
-
   // basket der uns die Id der ausgewählten Karte anzeigt und ob sie ausgewählt ist oder nicht
   basket: { [key: number]: boolean } = {
   };
 
-
   // HttpClient anfordern via Dependency Injection.
   constructor(private rentService: RentService) {
   }
-
 
   // Diese Methode ruft Angular nach dem Initialisieren der Komponente auf,
   // und wird für Initialisierungen von Eigenschaften verwendet.

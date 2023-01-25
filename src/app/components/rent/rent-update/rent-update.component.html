@@ -1,0 +1,25 @@
+<div class="card" [ngClass]="{ 'active-card' : selectedEdit }">
+
+  <div class="card-header">
+      <h2 class="title">{{item?.brand}} - {{item?.year}}</h2>
+  </div>
+
+
+  <div class="card-body">
+      <p>Brand.: {{item?.brand}}</p>
+      <p>Year.: {{item?.year}}</p>
+
+      <p>
+        <button class="btn btn-default"
+          *ngIf="!selectedEdit"
+          (click)="selectEditMotorcycle()">Edit</button>
+
+        <!--
+        <button class="btn btn-default"
+          *ngIf="selectedEdit"
+          (click)="putMotorcycle()">Update Motorcycle</button>
+        -->
+      </p>
+
+  </div>
+</div>

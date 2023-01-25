@@ -12,25 +12,28 @@ import { RentService } from '../rent.service';
 
 export class RentRequestComponent implements OnInit {
 
+  // Definition des Formates
   post: Post = {
     title: '',
-    body: '',
-    published: false
+    body: ''
   };
   submitted = false;
 
+  // "Import" von RentService
   constructor(private rentService: RentService) {
   }
 
   ngOnInit(): void {
   }
 
+  // in der var "data" wird der Post gespeichert
   createRequest(): void {
     const data = {
       title: this.post.title,
       body: this.post.body
     };
 
+  // Post wird mit dem Aufruf der Service Methode in der Datenbank gespeichert
     this.rentService.createPost(data)
       .subscribe({
         next: (res) => {
@@ -40,12 +43,12 @@ export class RentRequestComponent implements OnInit {
       });
   }
 
+  // Möglichkeit um nach erstelltem Post, einen weiteren zu erstellen
   newPost(): void {
     this.submitted = false;
     this.post = {
       title: '',
-      body: '',
-      published: false
+      body: ''
     };
   }
 
