@@ -1,3 +1,8 @@
+# part-entität: Dorian Pfeiler
+# rent-entität: Michael Krumpschmid
+# appointment-entität: Stefan Wurdits
+
+
 # Starter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
